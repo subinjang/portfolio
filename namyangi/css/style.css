@@ -1,0 +1,79 @@
+#wrap {
+  width: 1124px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
+#wrap > header {
+  width: 100%;
+  height: 100px;
+  outline: 1px solid red;
+}
+
+#wrap > header > .bg_lnb {
+  display: none;
+}
+
+#wrap > header > .container {
+  position: relative;
+}
+
+#wrap > header > .container > .logo {
+  position: absolute;
+  left: 90px;
+  top: 40px;
+  width: 111px;
+  background-image: url(./../images/img_logo.png);
+}
+
+#wrap > header > .container > .logo > a {
+  display: block;
+  height: 60px;
+  text-indent: -9999px;
+}
+
+#wrap > header > .container > .sub_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap > header > .container > .sub_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap > header > .container > nav > .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap > header > .container > nav > .gnb > li > .lnb {
+  display: none;
+}
+
+#wrap > header > .container > .gnb_btn {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 60px;
+  background-image: url(./../images/img_gnb_menu.png);
+  background-position: 0 -60px;
+}
+
+#wrap > header > .container > .gnb_btn > a {
+  display: block;
+  height: 60px;
+}
+
+#wrap > section {
+  height: 300px;
+}
+
+#wrap > footer {
+  height: 200px;
+}
+/*# sourceMappingURL=style.css.map */

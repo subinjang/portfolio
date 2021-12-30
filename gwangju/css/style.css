@@ -1,0 +1,418 @@
+/* header */
+header {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 1024px;
+  height: 66px;
+  margin: 10px 0 0 -512px;
+  z-index: 1000;
+}
+
+header > .logo {
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  width: 218px;
+  height: 91px;
+  margin-top: -46px;
+  text-indent: -9999px;
+}
+
+header > .logo > a {
+  display: block;
+  height: 70px;
+}
+
+header > .logo > a > img {
+  display: block;
+  width: 100%;
+}
+
+header > nav {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  margin-top: -5px;
+}
+
+header > nav > .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 900px;
+}
+
+header > nav > .gnb > li {
+  width: 100px;
+}
+
+header > nav > .gnb > li > a {
+  display: block;
+  height: 66px;
+  line-height: 66px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+header > nav > .gnb > li.on > a,
+header > nav > .gnb > li:hover > a {
+  color: gold;
+  font-weight: 600;
+}
+
+section#home {
+  position: relative;
+  background-image: url(./../images/gwangju-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section#home > h2 {
+  display: none;
+}
+
+section#home > p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 470px;
+  height: 200px;
+  margin-left: -235px;
+  margin-top: -250px;
+  line-height: 200px;
+  font-size: 48px;
+  font-family: serif;
+  letter-spacing: 1px;
+}
+
+section#active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1520px;
+  height: 740px;
+  margin: 0 auto;
+  padding: 200px 0 30px;
+}
+
+section#active > h2 {
+  display: none;
+}
+
+section#active > .active {
+  width: 700px;
+}
+
+section#active > .active > .active_1 > a {
+  display: block;
+}
+
+section#active > .active > .active_1 > a > .thumb {
+  overflow: hidden;
+  display: block;
+  width: 700px;
+  height: 380px;
+}
+
+section#active > .active > .active_1 > a > .thumb > img {
+  display: block;
+  width: 100%;
+}
+
+section#active > .active > .active_1 > a > .info {
+  display: block;
+  width: 700px;
+  height: 360px;
+  background-color: #29003e;
+}
+
+section#active > .active > .active_1 > a > .info > h3 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 36px;
+  text-align: center;
+  line-height: 160px;
+}
+
+section#active > .active > .active_1 > a > .info > p {
+  width: 535px;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+}
+
+section#history {
+  width: 1520px;
+  margin: 0 auto;
+  padding: 200px 0 30px;
+}
+
+section#history > h2 {
+  display: none;
+}
+
+section#history > .history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section#history > .history:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+  margin-top: 50px;
+}
+
+section#history > .history > .frame {
+  overflow: hidden;
+  display: block;
+  width: 720px;
+  height: 550px;
+}
+
+section#history > .history > .frame > img {
+  display: block;
+}
+
+section#history > .history > .text > h3 {
+  font-weight: 800;
+  font-size: 36px;
+  text-align: center;
+  line-height: 200px;
+}
+
+section#history > .history > .text > p {
+  width: 720px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+}
+
+section#food {
+  width: 1520px;
+  margin: 0 auto;
+  padding: 200px 0 30px;
+}
+
+section#food > h2 {
+  display: none;
+}
+
+section#food > .food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1110px;
+  height: 305px;
+  margin: 0 auto 50px;
+}
+
+section#food > .food:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+}
+
+section#food > .food > span {
+  overflow: hidden;
+  display: block;
+  width: 390px;
+  height: 305px;
+}
+
+section#food > .food > span > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+section#food > .food > .text > h3 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 150px;
+}
+
+section#food > .food > .text > p {
+  width: 680px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+}
+
+section#play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1316px;
+  margin: 0 auto;
+  padding: 200px 0 30px;
+}
+
+section#play > h2 {
+  display: none;
+}
+
+section#play > .play {
+  width: 595px;
+  border: 1px solid #000;
+}
+
+section#play > .play:nth-of-type(3), section#play > .play:nth-of-type(4) {
+  margin-top: 120px;
+}
+
+section#play > .play > .play_gallery > a {
+  display: block;
+}
+
+section#play > .play > .play_gallery > a > .thumb {
+  overflow: hidden;
+  display: block;
+  width: 595px;
+  height: 332px;
+}
+
+section#play > .play > .play_gallery > a > .thumb > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+section#play > .play > .play_gallery > a > .info {
+  display: block;
+  width: 595px;
+  height: 170px;
+}
+
+section#play > .play > .play_gallery > a > .info > h3 {
+  color: #222;
+  font-weight: 800;
+  font-size: 36px;
+  text-align: center;
+  line-height: 170px;
+}
+
+section#gallery {
+  width: 1520px;
+  margin: 0 auto;
+  padding: 200px 0 30px;
+}
+
+section#gallery > h2 {
+  display: none;
+}
+
+section#gallery > a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+section#gallery > a > .title {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 364px;
+  height: 66px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  line-height: 66px;
+  background-color: rgba(27, 27, 27, 0.3);
+}
+
+section#gallery > a > .frame {
+  overflow: hidden;
+  display: block;
+  width: 1520px;
+  height: 500px;
+}
+
+section#gallery > a > .frame > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 145px;
+  padding-top: 69px;
+}
+
+footer > span {
+  display: block;
+  width: 150px;
+  text-indent: -9999px;
+  background-image: url(./../images/logo/logo-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer > address {
+  line-height: 70px;
+  text-align: center;
+}
+
+aside {
+  display: none;
+  position: fixed;
+  right: 1.8em;
+  bottom: 1.8em;
+  z-index: 1000;
+}
+
+aside > a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  background-color: rgba(235, 235, 235, 0.8);
+}
+
+aside > a:hover {
+  color: #fff;
+  background-color: gold;
+}
+/*# sourceMappingURL=style.css.map */
