@@ -1869,7 +1869,7 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 80px 50px;
-  background-image: url(./../images/uidesign/gallery/mino-main.png), url(./../images/uidesign/gallery/mino-bg.png);
+  background-image: url(./../images/uidesign/gallery/mino-main.png);
   background-position: 60px 230px, 0 0;
   background-size: 380px auto, cover;
   background-repeat: no-repeat;
@@ -1968,7 +1968,7 @@
   height: 350px;
   margin-bottom: 20px;
   text-indent: -9999px;
-  background-image: url(./../images/uidesign/gallery/mino-01.png);
+  background-image: url(./../images/uidesign/gallery/mino_thmb-01.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 8px solid #311c0f;
