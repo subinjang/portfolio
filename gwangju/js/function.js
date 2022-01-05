@@ -69,22 +69,4 @@ $(document).ready(function(){
       pageAni(0);
   });
 
-  // 인디케이터에 대한 클릭이벤트 구문
-  $indicator.on('click', function(){
-   idx = $indicator.index(this);
-   console.log(idx);
-   
-   $indicator.eq(idx).parent().addClass('on').siblings().removeClass('on');
-   
-    if (idx < 5) {
-    idx++;
-    } else {
-    idx = 0;
-    };
-
-    console.log('num=' + idx);
-
-    // $('section#home > .slides > .slides-container > li > img').attr('src', "images/bg_home_" + idx + ".jpg").animate();
-    $('#imgDokdo').attr('src', "images/bg_home_" + idx + ".jpg");
-    });
 });
