@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <title>calendar</title>
+</head>
+<body>
+    <table class="calendar">
+        <thead>
+            <tr class="calendar_nav">
+                <th>
+                    <button id="btnPrevCalendar" class="calendarBtn">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </th>
+                <th colspan="5">
+                    <span id="calYear">YYYY</span>.<span id="calMonth">MM</span>
+                </th>
+                <th>
+                    <button id="nextNextCalendar" class="calendarBtn">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                </th>
+            </tr>
+            <tr>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>T</th>
+                <th>F</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

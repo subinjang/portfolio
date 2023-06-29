@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/paging.js"></script>
+    <script src="./js/javascript.js"></script>
+    <title>YUJA MALL</title>
+</head>
+<body>
+    <header class="top-container">
+        <div class="top">
+            <div class="ham-btn">
+                <a class="menu-trigger" href="#">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </a>
+            </div>
+
+            <a href="#" class="logo">
+                <h1>주문 관리</h1>
+            </a>
+            <div class="hd_qnb">
+                <a href="sub03.html" class="serch">
+                    <img src="./images/serch.png" alt="serch">
+                </a>
+                <a href="#" class="notify">
+                    <img src="./images/notify.png" alt="notify">
+                    <span class="counter">12</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 햄버거 메뉴 시작 -->
+        <div class="ham-con">
+            <div class="ham-login">
+                <a href="sub04.html">로그인 해주세요<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div id="ham-menu-wrap">
+                <div class="ham-menu mt-5">
+                    <ul class="ham-top-menu">
+                        <li><a href="main.html">주간 방문자수</a></li>
+                        <li><a href="main.html">일정</a></li>
+                        <li><a href="sub02.html">고객문의 관리</a></li>
+                        <li><a href="main.html">최근 주문현황</a></li>
+                        <li><a href="main.html">매출 현황</a></li>
+                        <li><a href="main.html">공지사항 관리</a></li>
+                        <li><a href="main.html">회원 관리</a></li>
+                        <li><a href="sub03.html">주문 관리</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- 햄버거 메뉴 끝 -->
+    </header>
+
+    <section class="contents-container">
+        <div class="contents01">
+            <h2 class="title">주문 검색</h2>
+
+            <table class="table02">
+                <caption>주문 검색</caption>
+                <thead class="thead-hidden">
+                    <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>쇼핑몰</th>
+                        <td>
+                            <select name="sectect-box">
+                                <option value="쇼핑몰 선택" selected>쇼핑몰 선택</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>검색어</th>
+                        <td>
+                            <select name="sectect-box">
+                                <option value="주문번호" class="gray" selected>주문번호</option>
+                                <option value="상품명" class="gray">상품명</option>
+                            </select>
+                            <input type="text" class="mt5">
+                        </td>
+                    </tr>
+                    <tr class="date">
+                        <th>기간</th>
+                        <td class="flex">
+                            <div>
+                                <input type="date" id="dateStart" name="dateStart" value="">
+                            </div>
+                            <span>-</span>
+                            <div>
+                                <input type="date" id="dateEnd" name="dateEnd" value="">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>주문상태</th>
+                        <td>
+                            <select name="sectect-box">
+                                <option value="입금대기" class="gray">입금대기</option>
+                                <option value="입금완료" class="gray" selected>입금완료</option>
+                                <option value="상품준비중" class="gray">상품준비중</option>
+                                <option value="배송대기" class="gray">배송대기</option>
+                                <option value="배송중" class="gray">배송중</option>
+                                <option value="배송완료" class="gray">배송완료</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>주문유형</th>
+                        <td>
+                            <form class="flex">
+                                <div>
+                                    <input type="checkbox" name="전체" id="all" checked>
+                                    <label for="all">전체</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="PC" id="pc">
+                                    <label for="pc">PC</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="모바일" id="mobile">
+                                    <label for="mobile">모바일</label>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>결제수단</th>
+                        <td>
+                            <form class="flex">
+                                <div class="w50">
+                                    <input type="checkbox" name="무통장입금" id="no-bankbook" checked>
+                                    <label for="no-bankbook">무통장입금</label>
+                                </div>
+                                <div class="w50">
+                                    <input type="checkbox" name="신용카드" id="credit-card">
+                                    <label for="credit-card">신용카드</label>
+                                </div>
+                                <div class="w50">
+                                    <input type="checkbox" name="계좌이체" id="account-transfer">
+                                    <label for="account-transfer">계좌이체</label>
+                                </div>
+                                <div class="w50">
+                                    <input type="checkbox" name="모바일페이" id="mobile-pay">
+                                    <label for="mobile-pay">모바일페이</label>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        
+        </div>    
+            <div class="inquiry-all-trigger">
+                <button type="button" class="btn2">검색</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="flex">
+            <address>Copyright ⓒ 2017 yuja. ALL rights reserved.</address>
+            <a id="back-to-top" href="#">
+                <span>&#9650;</span>
+                <span>TOP</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
