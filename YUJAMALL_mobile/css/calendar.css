@@ -7,10 +7,10 @@ td {font-family: "Montserrat", sans-serif; font-size: 16px; text-align: center; 
 table.calendar {clear: both; width: 100%; height: 285px; text-align:center; background: #fff; border : 1px solid #ddd; } 
 table.calendar > tbody > tr{display: grid; grid-template-columns: repeat(7, 1fr); height:calc(100% / 6);}
 table.calendar > thead > tr:last-child {display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 5px; }
-table.calendar > thead > .calendar_nav {display: flex; justify-content: space-between; width: 100%; height: 75.5px; color: #6e6e6e; align-items: center; text-decoration: none; padding:0 15px; transition-duration: 0.2s;}
-table.calendar > thead > .calendar_nav > th > .calendarBtn {display: block; width: 28px; height: 28px; color: #333; background: transparent; padding: 0; border: 1px solid #ccc; border-radius: 14px; cursor: pointer; } 
-table.calendar > thead > .calendar_nav > th > .calendarBtn:hover {background: #eee; border: 1px solid #e76b3f;} 
-table.calendar > thead > .calendar_nav > th > .calendarBtn > .fa {text-align: center; font-size: 20px; font-weight: 600; } 
-table.calendar > thead > .calendar_nav > th > .calendarBtn > .fa-angle-left {margin-right:3px; } 
-table.calendar > thead > .calendar_nav > th > .calendarBtn > .fa-angle-right {margin-left:3px; } 
-table.calendar > thead > .calendar_nav > th > span {color: #333; font-size: 20px; }
+table.calendar > thead > .calendar-nav {display: flex; justify-content: space-between; width: 100%; height: 75.5px; color: #6e6e6e; align-items: center; text-decoration: none; padding:0 15px; transition-duration: 0.2s;}
+table.calendar > thead > .calendar-nav > th > .calendarBtn {display: block; width: 28px; height: 28px; color: #333; background: transparent; padding: 0; border: 1px solid #ccc; border-radius: 14px; cursor: pointer; } 
+table.calendar > thead > .calendar-nav > th > .calendarBtn:hover {background: #eee; border: 1px solid #e76b3f;} 
+table.calendar > thead > .calendar-nav > th > .calendarBtn > .fa {text-align: center; font-size: 20px; font-weight: 600; } 
+table.calendar > thead > .calendar-nav > th > .calendarBtn > .fa-angle-left {margin-right:3px; } 
+table.calendar > thead > .calendar-nav > th > .calendarBtn > .fa-angle-right {margin-left:3px; } 
+table.calendar > thead > .calendar-nav > th > span {color: #333; font-size: 20px; }
