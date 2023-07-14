@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/javascript.js"></script>
+    
+    <title>Dashlite</title>
+    <script src="https://kit.fontawesome.com/722182e065.js" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">
+                <a href="#">
+                    <h1>logo</h1>
+                    <img src="./images/logo-dark.png" alt="logo-dark" class="logo-dark">
+                    <img src="./images/logo-small.png" alt="logo-small" class="logo-small">
+                </a>
+            </div>
+
+            <div class="ham-btn icon-bg">
+                <a class="menu-trigger opacity" href="#">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar-menu-container">
+            <ul class="sidebar-menu">
+                <li class="menu-item">
+                    <a href="#" class="on">
+                        <i class="fa-solid fa-border-all menu-icon"></i>
+                        <span class="menu-txt opacity">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <a href="#">
+                        <i class="fa-solid fa-book menu-icon"></i>
+                        <span class="menu-txt opacity">Courses</span>
+                        <i class="fa-solid fa-chevron-right arrow opacity"></i>
+                    </a>
+                    <ol class="sub-menu">
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Catagories</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Course List</span></a>
+                        </li>
+                    </ol>
+                </li>
+                <li class="menu-item has-sub">
+                    <a href="#">
+                        <i class="fa-solid fa-user menu-icon"></i>
+                        <span class="menu-txt opacity">Instructors</span>
+                        <i class="fa-solid fa-chevron-right arrow opacity"></i>
+                    </a>
+                    <ol class="sub-menu">
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Instructor Overview</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Instructor List</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Instructor Details</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Instructor Payment</span></a>
+                        </li>
+                    </ol>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-user-group menu-icon"></i>
+                        <span class="menu-txt opacity">Students</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <a href="#">
+                        <i class="fa-solid fa-file-circle-plus menu-icon"></i>
+                        <span class="menu-txt opacity">Enrolment</span>
+                        <i class="fa-solid fa-chevron-right arrow opacity"></i>
+                    </a>
+                    <ol class="sub-menu">
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Enroll History</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Enroll a Student</span></a>
+                        </li>
+                    </ol>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-comment-dots menu-icon"></i>
+                        <span class="menu-txt opacity">Messages</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-user-gear menu-icon"></i>
+                        <span class="menu-txt opacity">Admin profile</span>
+                    </a>
+                </li>
+                <li class="menu-item has-sub">
+                    <a href="#">
+                        <i class="fa-regular fa-file-lines menu-icon"></i>
+                        <span class="menu-txt opacity">Invoice</span>
+                        <i class="fa-solid fa-chevron-right arrow opacity"></i>
+                    </a>
+                    <ol class="sub-menu">
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Invoice List</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><span class="menu-txt opacity">Invoice Details</span></a>
+                        </li>
+                    </ol>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear menu-icon"></i>
+                        <span class="menu-txt opacity">Settings</span>
+                    </a>
+                </li>
+                <li class="menu-item-title">
+                    <span>RETURN TO</span>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-brands fa-first-order menu-icon"></i>
+                        <span class="menu-txt opacity">Main Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-layer-group menu-icon"></i>
+                        <span class="menu-txt opacity">All Components</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="cover-bar"></div>
+    </div>
+    <!-- sidebar end -->
+    <div class="wrap">
+        <header class="hd-top">
+            <div class="hd-container">
+                <div class="hd-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search" id="search" placeholder="Search anything">
+                </div>
+                <div class="hd-tools">
+                    <ul class="hd-qnb">
+                        <li class="language icon-bg">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="./images/english-sq.png" alt="english-sq">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="chat icon-bg">
+                            <a href="#">
+                                <i class="fa-regular fa-comments"></i>
+                            </a>
+                        </li>
+                        <li class="bell icon-bg">
+                            <a href="#">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                        </li>
+                        <li class="profile">
+                            <a href="#" class="profile-container">
+                                <div class="user-img">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                                <div class="text-box">
+                                    <span class="user-status">Administator</span>
+                                    <div class="user-name">
+                                        <span>Abu Bin Ishityak</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="contents-container">
+                <div class="contents-header flex">
+                    <div class="contents-header-txt">
+                        <h2 class="page-title">Dashboard</h2>
+                        <span>Welcome to Learning Management Dashboard.</span>
+                    </div>
+                    <div class="contents-header-btn flex">
+                        <a href="#" class="btn btn-days">
+                            <i class="fa-regular fa-calendar btn-icon"></i>
+                            <span>Last 30 Days</span>
+                            <i class="fa-solid fa-chevron-right arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn2 btn-primary">
+                            <i class="fa-regular fa-file-lines btn-icon"></i>
+                            <span>Reports</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ly-box">
+                    <div class="row">
+                        <div class="col5 pdr14">
+                            <div class="row">
+                                <div class="col10">
+                                    <div class="content-container">
+                                        <div class="content-header flex1">
+                                            <div class="content-header-txt">
+                                                <h3 class="content-title">Students Enrolement</h3>
+                                                <span>In last 30 days enrolement of students</span>
+                                            </div>
+                    
+                                            <div class="tooltip">
+                                                <span class="tooltiptxt tooltip-left">Students Enrolement</span>
+                                                <i class="fa-solid fa-circle"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="data-wrap flex">
+                                            <div class="sale-data flex col5">
+                                                <div class="sale-data-box">
+                                                    <div class="amount">
+                                                        <span>5490</span>
+                                                        <span class="down">
+                                                            <i class="fa-solid fa-arrow-down"></i>
+                                                            16.93%
+                                                        </span>
+                                                    </div>
+                                                    <span class="sub-txt">This Month</span>
+                                                </div>
+                                                <div class="sale-data-box">
+                                                    <div class="amount">
+                                                        <span>5490</span>
+                                                        <span class="up">
+                                                            <i class="fa-solid fa-arrow-up"></i>
+                                                            4.26%
+                                                        </span>
+                                                    </div>
+                                                    <span class="sub-txt">This Month</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart col5">
+                                                <canvas id="myChart_bar"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col5 pdr14">
+                                    <div class="content-container pd-b0">
+                                        <div class="content-header">
+                                            <div class="content-header-txt">
+                                                <h3 class="content-title">Total Sales</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col5 pdl14">
+                                    <div class="content-container pd-b0">
+                                        <div class="content-header">
+                                            <div class="content-header-txt">
+                                                <h3 class="content-title">This week so far</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col5 pdl14">
+                            <div class="content-container">
+                                <div class="content-header flex1">
+                                    <div class="content-header-txt">
+                                        <h3 class="content-title">Top Categories</h3>
+                                        <span>In last 15 days buy and sells overview.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col3"></div>
+                        <div class="col3"></div>
+                        <div class="col3"></div>
+                        <div class="col6"></div>
+                        <div class="col3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="ft-container">
+                <div class="ft-wrap">
+                    <address>© 2023 DashLite. Template by Softnio</address>
+                    <div class="ft-qnb">
+                        <div class="qnb-item cont-select">
+                            <button class="btn-select">English</button>
+                            <ul class="option-list">
+                              <li class="option-item"><button>English</button></li>
+                              <li class="option-item"><button>Español</button></li>
+                              <li class="option-item"><button>Français</button></li>
+                              <li class="option-item"><button>Türkçe</button></li>
+                            </ul>
+                        </div>
+                        <div class="qnb-item">
+                            <a href="#">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Select Region</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+</html>
