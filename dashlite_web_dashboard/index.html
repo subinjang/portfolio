@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/chart.js"></script>
     <script src="./js/javascript.js"></script>
     
     <title>Dashlite</title>
@@ -29,9 +30,7 @@
 
             <div class="ham-btn icon-bg">
                 <a class="menu-trigger opacity" href="#">
-                    <span>-</span>
-                    <span>-</span>
-                    <span>-</span>
+                    <i class="fa-solid fa-bars fa-bar"></i>
                 </a>
             </div>
         </div>
@@ -163,7 +162,7 @@
                 </div>
                 <div class="hd-tools">
                     <ul class="hd-qnb">
-                        <li class="language icon-bg">
+                        <li class="language">
                             <a href="#">
                                 <div class="img-box">
                                     <img src="./images/english-sq.png" alt="english-sq">
@@ -221,7 +220,7 @@
 
                 <div class="ly-box">
                     <div class="row">
-                        <div class="col5 pdr14">
+                        <div class="col5 mt28 pdr14">
                             <div class="row">
                                 <div class="col10">
                                     <div class="content-container">
@@ -251,7 +250,7 @@
                                                 </div>
                                                 <div class="sale-data-box">
                                                     <div class="amount">
-                                                        <span>5490</span>
+                                                        <span>1480</span>
                                                         <span class="up">
                                                             <i class="fa-solid fa-arrow-up"></i>
                                                             4.26%
@@ -267,39 +266,318 @@
                                     </div>
                                 </div>
 
-                                <div class="col5 pdr14">
+                                <div class="col5 mt28 pdr14 total-sale flex">
                                     <div class="content-container pd-b0">
                                         <div class="content-header">
                                             <div class="content-header-txt">
                                                 <h3 class="content-title">Total Sales</h3>
+                                                <div class="data-wrap total-sales">
+                                                    <div class="sale-data flex">
+                                                        <div class="sale-data-box">
+                                                            <div class="amount">
+                                                                <span>$9,495.20</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sale-data-box">
+                                                            <div class="amount">
+                                                                <span class="up">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                    4.26%
+                                                                </span>
+                                                            </div>
+                                                            <span class="sub-txt">vs. last month</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="chart">
+                                        <canvas id="totalSells"></canvas>
+                                    </div>
                                 </div>
-                                <div class="col5 pdl14">
+                                <div class="col5 mt28 pdl14 total-sale flex">
                                     <div class="content-container pd-b0">
                                         <div class="content-header">
                                             <div class="content-header-txt">
                                                 <h3 class="content-title">This week so far</h3>
+                                                <div class="data-wrap total-sales">
+                                                    <div class="sale-data flex">
+                                                        <div class="sale-data-box">
+                                                            <div class="amount">
+                                                                <span>$2,995.81</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sale-data-box">
+                                                            <div class="amount">
+                                                                <span class="up">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                    7.13%
+                                                                </span>
+                                                            </div>
+                                                            <span class="sub-txt">vs. last week</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="chart">
+                                        <canvas id="weeklySells"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col5 pdl14">
+                        <div class="col5 mt28 pdl14">
                             <div class="content-container">
                                 <div class="content-header flex1">
                                     <div class="content-header-txt">
                                         <h3 class="content-title">Top Categories</h3>
                                         <span>In last 15 days buy and sells overview.</span>
                                     </div>
+                                    <div class="content-header-btn icon-bg">
+                                        <a href="#">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="data-wrap flex">
+                                    <div class="cumulative-chart">
+                                        <canvas id="courseProgress"></canvas>
+                                    </div>
+                                    <ul class="sale-data">
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Web Development</span>
+                                        </li>
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Mobile Application</span>
+                                        </li>
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Graphics Design</span>
+                                        </li>
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Database</span>
+                                        </li>
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Marketing</span>
+                                        </li>
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Machine Learning</span>
+                                        </li>
+                                        <li class="flex"><div class="color-box"></div>
+                                            <span>Data Science</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col3"></div>
-                        <div class="col3"></div>
-                        <div class="col3"></div>
+                        <div class="col3 pdr14">
+                            <div class="content-container mt28 pdl14">
+                                <div class="content-header flex mb12">
+                                    <div class="content-header-txt">
+                                        <h3 class="content-title mb0">Top Courses</h3>
+                                    </div>
+                                    <div class="weekly">
+                                        <a href="#" class="flex">
+                                            <span>Weekly</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="top-products">
+                                    <li class="item">
+                                        <div class="user-avatar"><span>UI/X</span></div>
+                                        <div class="info">
+                                            <h4 class="info-title">UI/UX Design with Adobe XD</h4>
+                                            <span class="info-price">$85.00</span>
+                                        </div>
+                                        <div class="total">
+                                            <div class="amount">
+                                                <span>$2,125.00</span>
+                                            </div>
+                                            <div class="count">
+                                                <span>25 Sold</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="user-avatar"><span>AD</span></div>
+                                        <div class="info">
+                                            <h4 class="info-title">Android App Development</h4>
+                                            <span class="info-price">$95.00</span>
+                                        </div>
+                                        <div class="total">
+                                            <div class="amount">
+                                                <span>$1,710.00</span>
+                                            </div>
+                                            <div class="count">
+                                                <span>10 Sold</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="user-avatar"><span>WD</span></div>
+                                        <div class="info">
+                                            <h4 class="info-title">Wordpress Development</h4>
+                                            <span class="info-price">$70.00</span>
+                                        </div>
+                                        <div class="total">
+                                            <div class="amount">
+                                                <span>$1050.00</span>
+                                            </div>
+                                            <div class="count">
+                                                <span>15 Sold</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="user-avatar"><span>ML</span></div>
+                                        <div class="info">
+                                            <h4 class="info-title">Machine Learning</h4>
+                                            <span class="info-price">$110.00</span>
+                                        </div>
+                                        <div class="total">
+                                            <div class="amount">
+                                                <span>$990.00</span>
+                                            </div>
+                                            <div class="count">
+                                                <span>10 Sold</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="user-avatar"><span>RD</span></div>
+                                        <div class="info">
+                                            <h4 class="info-title">Responsive Design</h4>
+                                            <span class="info-price">$80.00</span>
+                                        </div>
+                                        <div class="total">
+                                            <div class="amount">
+                                                <span>$960.00</span>
+                                            </div>
+                                            <div class="count">
+                                                <span>12 Sold</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col3 pdr14 pdl14">
+                            <div class="content-container mt28 pd0">
+                                <div class="content-header">
+                                    <div class="inner flex">
+                                        <div class="content-header-txt">
+                                            <h3 class="content-title mb0">Top Instructors</h3>
+                                        </div>
+                                        <div class="view-all">
+                                            <a href="#" class="flex link">
+                                                <span>View All</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="inner-group">
+                                    <li class="item inner flex">
+                                        <div class="user-avatar"><span>AB</span></div>
+                                        <div class="review">
+                                            <h4 class="review-title">Abu Bin Ishtiyak</h4>
+                                            <span class="sub-txt">info@softnio.com</span>
+                                        </div>
+                                        <div class="review-status">
+                                            <ul class="review-stars flex">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                            </ul>
+                                            <div class="review-count">
+                                                <span>25 Reviews</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item inner flex">
+                                        <div class="user-avatar"><span>AB</span></div>
+                                        <div class="review">
+                                            <h4 class="review-title">Abu Bin Ishtiyak</h4>
+                                            <span class="sub-txt">info@softnio.com</span>
+                                        </div>
+                                        <div class="review-status">
+                                            <ul class="review-stars flex">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                            </ul>
+                                            <div class="review-count">
+                                                <span>25 Reviews</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item inner flex">
+                                        <div class="user-avatar"><span>AB</span></div>
+                                        <div class="review">
+                                            <h4 class="review-title">Abu Bin Ishtiyak</h4>
+                                            <span class="sub-txt">info@softnio.com</span>
+                                        </div>
+                                        <div class="review-status">
+                                            <ul class="review-stars flex">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                            </ul>
+                                            <div class="review-count">
+                                                <span>25 Reviews</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item inner flex">
+                                        <div class="user-avatar"><span>AB</span></div>
+                                        <div class="review">
+                                            <h4 class="review-title">Abu Bin Ishtiyak</h4>
+                                            <span class="sub-txt">info@softnio.com</span>
+                                        </div>
+                                        <div class="review-status">
+                                            <ul class="review-stars flex">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                            </ul>
+                                            <div class="review-count">
+                                                <span>25 Reviews</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col3 pdr14 pdl14">
+                            <div class="content-container mt28 pd0">
+                                <div class="content-header">
+                                    <div class="inner flex">
+                                        <div class="content-header-txt">
+                                            <h3 class="content-title mb0">Support Requests</h3>
+                                        </div>
+                                        <div class="all-requests">
+                                            <a href="#" class="flex link">
+                                                <span>All Requests</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>                       
                         <div class="col6"></div>
                         <div class="col3"></div>
                     </div>

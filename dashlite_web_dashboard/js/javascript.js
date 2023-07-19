@@ -28,7 +28,7 @@ $(document).ready(function(){
         }
     })
 });
- 
+
 // ft select
 $(function(){
     const btn = document.querySelector('.btn-select');
