@@ -43,10 +43,7 @@ textarea{resize: none;}
 
 a:link{color:#222;text-decoration:none;}
 a:active{color:#fff;}
-/* 
-a:hover{color:#222;}
-a:visited{color:#222;}
- */
+a:hover{color:#fff;}
 
 em,address{font-style:normal;}
 hr,legend{display:none;}
