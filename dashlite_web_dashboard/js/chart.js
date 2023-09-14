@@ -318,8 +318,8 @@ $(document).ready(function(){
                 backgroundColor: "#9cabff",
                 borderWidth: 2,
                 borderColor: "#9cabff",
-                // borderSkipped: "bottom",
-                // barThickness: 15
+                borderSkipped: "bottom", 
+                barThickness: 15
             }]
         },
         options: {
