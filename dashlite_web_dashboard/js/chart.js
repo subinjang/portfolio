@@ -16,7 +16,7 @@ $(document).ready(function(){
                 borderColor: "transparent",
                 hoverBorderColor: "transparent",
                 borderSkipped: "bottom",
-                barThickness: 15
+                barThickness: 18
             }]
         },
         options: {
@@ -359,20 +359,80 @@ $(document).ready(function(){
             },
             scales: {
                 x : {
-                    display : 0,
-                    // grid : {
-                    //     display: false, 
-                    //     drawBorder: false
-                    // }, 
-                    gridLines: {
-                        display: 1
-                    }
+                    display : false,
                 },
                 y : {
-                    display : 1,
+                    display : true,
                     gridLines: {
-                        display: 1
+                        display: true
+                    },
+                    ticks: {
+                        display : false,
+                        min : 0,
+                        stepSize : 280
                     }
+                }
+            }
+        }
+    });
+});
+
+
+// chart.js - type: doughnut
+$(document).ready(function(){
+    const ctx = document.getElementById('trafficSources');
+
+    new Chart(ctx, {
+        type: 'doughnut', //pie, line, doughnut, polarArea
+        data: {
+            labels: ["Organic Search", "Social Media", "Referrals", "Others"],
+            datasets: [{
+                label:"People",
+                borderColor: "#fff",
+                backgroundColor: ["#b695ff", "#b8acff", "#ffa9ce", "#f9db7b"],
+                data: [4305, 859, 482, 138]
+            }]
+        },
+        options: {
+            maintainAspectRatio :false,
+            legend:{
+                labels: {
+                    display:false
+                },
+            },
+            plugins:{
+                legend: {
+                    display: false
+                },
+                datalabels: {
+                    display: false
+                },
+                tooltip:{
+                    enabled: true,
+                    usePointStyle: true,
+                    displayColors: false,
+                    titleSpacing: 3,
+                    backgroundColor: "#1C2B46",
+                    titleFont: {
+                        size: 14
+                    },
+                    titleColor:"#fff",
+                    titleMarginBottom: 4,
+                    titleAlign : "left",
+                    bodyFont: {
+                        size: 12
+                    },
+                    bodyColor:"#fff",
+                    bodySpacing: 3,
+                    padding: 8
+                }
+            },
+            scales: {
+                x : {
+                    display : false,
+                },
+                y : {
+                    display : false,
                 }
             }
         }

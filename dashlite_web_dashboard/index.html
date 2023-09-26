@@ -186,7 +186,7 @@
                                 </div>
                                 <div class="text-box">
                                     <span class="user-status">Administator</span>
-                                    <div class="user-name">
+                                    <div class="user-name dropdown">
                                         <span>Abu Bin Ishityak</span>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
@@ -236,8 +236,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="data-wrap flex">
-                                            <div class="sale-data flex col5">
+                                        <div class="data-wrap amount flex">
+                                            <div class="sale-data flex">
                                                 <div class="sale-data-box">
                                                     <div class="amount">
                                                         <span>5490</span>
@@ -259,7 +259,7 @@
                                                     <span class="sub-txt">This Month</span>
                                                 </div>
                                             </div>
-                                            <div class="chart col5">
+                                            <div class="chart">
                                                 <canvas id="myChart_bar"></canvas>
                                             </div>
                                         </div>
@@ -378,12 +378,10 @@
                                     <div class="content-header-txt">
                                         <h3 class="content-title mb0">Top Courses</h3>
                                     </div>
-                                    <div class="weekly">
-                                        <a href="#" class="flex">
-                                            <span>Weekly</span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                        </a>
-                                    </div>
+                                    <a href="#" class="dropdown">
+                                        <span>Weekly</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
                                 </div>
                                 <ul class="top-products">
                                     <li class="item">
@@ -645,7 +643,7 @@
                                                 </div>
                                                 <div class="amount">
                                                     <span class="up">
-                                                        <i class="fa-solid fa-arrow-down"></i>
+                                                        <i class="fa-solid fa-arrow-up"></i>
                                                         16.93%
                                                     </span>  
                                                 </div>
@@ -669,7 +667,7 @@
                                                 </div>
                                                 <div class="amount">
                                                     <span class="up">
-                                                        <i class="fa-solid fa-arrow-down"></i>
+                                                        <i class="fa-solid fa-arrow-up"></i>
                                                         16.93%
                                                     </span>  
                                                 </div>
@@ -678,11 +676,74 @@
                                         <div class="chart h170 pd0">
                                             <canvas id="analyticAuData"></canvas>
                                         </div>
+
+                                        <div class="chart-label-group flex">
+                                            <div class="chart-label">01 Jan, 2020</div>
+                                            <div class="chart-label">30 Jan, 2020</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col3"></div>
+                        <div class="col3 mt28 pdl14">
+                            <div class="flex column h100">
+                                <div class="content-container">
+                                    <div class="content-header flex1 traffic">
+                                        <div class="content-header-txt">
+                                            <h3 class="active-content-title traffic">Traffic Sources</h3>
+                                        </div>
+                
+                                        <a href="#" class="dropdown">
+                                            <span>30 Days</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="data-wrap flex">
+                                        <div class="doughnut-chart">
+                                            <canvas id="trafficSources"></canvas>
+                                        </div>
+                                        <ul class="sale-data doughnut">
+                                            <li class="flex">
+                                                <div class="doughnut-title">
+                                                    <div class="color-box"></div>
+                                                    <span>Organic Search</span>
+                                                </div>
+                                                <span>4,305</span>
+                                            </li>
+                                            <li class="flex">
+                                                <div class="doughnut-title">
+                                                    <div class="color-box"></div>
+                                                    <span>Referrals</span>
+                                                </div>
+                                                <span>482</span>
+                                            </li>
+                                            <li class="flex">
+                                                <div class="doughnut-title">
+                                                    <div class="color-box"></div>
+                                                    <span>Social Media</span>
+                                                </div>
+                                                <span>859</span>
+                                            </li>
+                                            <li class="flex">
+                                                <div class="doughnut-title">
+                                                    <div class="color-box"></div>
+                                                    <span>Others</span>
+                                                </div>
+                                                <span>138</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="doughnut-info">
+                                    <div class="info-note">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Traffic channels have beed generating the most traffics over past days.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
